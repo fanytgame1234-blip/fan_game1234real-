@@ -50,15 +50,7 @@
 --SetLagMode(getgenv().LagMode)
 
 -- Lệnh toggle
---game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
-   -- if gpe then return end
-    --if input.KeyCode == Enum.KeyCode.L then -- ấn L để bật/tắt
-       -- getgenv().LagMode = not getgenv().LagMode
-       -- SetLagMode(getgenv().LagMode)
-       -- print("LagMode:", getgenv().LagMode)
-   -- end
-
---end)  
+--game:GetService("UserInputService").I
 
 local urls = {
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_sky.lua",
@@ -79,3 +71,4 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
