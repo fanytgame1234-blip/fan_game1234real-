@@ -51,11 +51,13 @@ end
 
 -- Nếu PlaceId hợp lệ, tải và chạy script từ URL
 if isValidPlace then
-    local url = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua"
+    local url = { "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua", 
+    }
     pcall(function()
         loadstring(game:HttpGet(url))()
     end)
 end
+
 
 
 
