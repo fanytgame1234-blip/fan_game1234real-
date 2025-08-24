@@ -30,7 +30,33 @@ for i, url in ipairs(urls) do
             loadstring(game:HttpGet(url))()
         end)
     end)
+end 
+
+
+--Hunty zombie 
+-- Danh sách các PlaceId hợp lệ
+local validPlaceIds = {
+    86076978383613, -- PlaceId
+    
+}
+
+-- Kiểm tra xem PlaceId hiện tại có hợp lệ không
+local isValidPlace = false
+for _, id in ipairs(validPlaceIds) do
+    if game.PlaceId == id then
+        isValidPlace = true
+        break
+    end
 end
+
+-- Nếu PlaceId hợp lệ, tải và chạy script từ URL
+if isValidPlace then
+    local url = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua"
+    pcall(function()
+        loadstring(game:HttpGet(url))()
+    end)
+end
+
 
 
 
