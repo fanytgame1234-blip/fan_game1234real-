@@ -13,6 +13,7 @@ textLabel.TextColor3 = Color3.new(1,1,1)       -- màu trắng
 textLabel.TextStrokeColor3 = Color3.new(0,0,0) -- viền đen
 textLabel.TextStrokeTransparency = 0           -- viền hiện
 textLabel.TextSize = 8                          -- cỡ siêu nhỏ
-textLabel.Text = "Script fix lag by @fan_game1234"
+textLabel.Text = "@fan_game1234"
 textLabel.Font = Enum.Font.Code                 -- font code
+
 textLabel.Parent = screenGui
