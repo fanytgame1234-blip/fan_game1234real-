@@ -16,41 +16,7 @@
           --  end
        -- end
         
-        -- Nếu là Part/Mesh của map
-       -- if obj:IsA("BasePart") or obj:IsA("MeshPart") or obj:IsA("UnionOperation") then
-           -- if obj.CanCollide then
-               -- obj.Transparency = state and 1 or 0 -- làm vô hình nhưng vẫn giữ collision
-               -- if obj:FindFirstChildOfClass("Texture") then
-                    --obj:FindFirstChildOfClass("Texture").Transparency = state and 1 or 0
-              --  end
-            --else
-               -- obj.LocalTransparencyModifier = state and 1 or 0
-           -- end
-       -- elseif obj:IsA("Folder") or obj:IsA("Model") then
-            -- đệ quy duyệt map con
-            --for _, part in ipairs(obj:GetDescendants()) do
-              --  if part:IsA("BasePart") then
-                  --  if part.CanCollide then
-                       -- part.Transparency = state and 1 or 0
-                   -- else
-                        --part.LocalTransparencyModifier = state and 1 or 0
-                   -- end
-            --    end
-          -- end
-        --end
-    --end
-    
-    -- Xoá bầu trời
-  --  if state and Workspace:FindFirstChildOfClass("Sky") then
-       -- Workspace:FindFirstChildOfClass("Sky"):Destroy()
-  --  end
---end
 
--- Auto bật khi chạy
---SetLagMode(getgenv().LagMode)
-
--- Lệnh toggle
---game:GetService("UserInputService").I
 
 local urls = {
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_sky.lua",
@@ -71,4 +37,5 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
