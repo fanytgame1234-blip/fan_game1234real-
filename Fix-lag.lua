@@ -1,11 +1,4 @@
 -- Giảm lag cực mạnh
-            
-            
-            
-        
-
-
-
 local validPlaceIds = {2753915549, 4442272183, 7449423635}
 local currentPlaceId = game.PlaceId
 
@@ -38,6 +31,7 @@ for i, url in ipairs(urls) do
         end)
     end)
 end
+
 
 
 
