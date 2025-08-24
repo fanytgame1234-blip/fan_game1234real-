@@ -9,12 +9,9 @@
    -- for _, obj in ipairs(Workspace:GetChildren()) do
         -- Giữ lại Player + Quái
        -- if obj:IsA("Model") then
-          --  if Players:FindFirstChild(obj.Name) then
-              --  continue -- giữ lại người chơi
-          --  elseif obj:FindFirstChild("Humanoid") then
-               -- continue -- giữ lại NPC/quái
-          --  end
-       -- end
+          --  if Players:FindFirstChil
+          
+       
         
 
 
@@ -37,5 +34,6 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
 
