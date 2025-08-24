@@ -4,7 +4,10 @@ local urls = {
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_lightning.lua",
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_models.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player-mob.lua", 
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_animation.lua"
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_animation.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_other_sounds.lua",  
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_player_sounds.lua"
+    
 }
 
 for i, url in ipairs(urls) do
@@ -20,6 +23,7 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
 
 
