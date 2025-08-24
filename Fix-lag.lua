@@ -34,33 +34,32 @@ end
 
 
 --Hunty zombie 
--- Danh sách các PlaceId hợp lệ
-local validPlaceIds = {
-    86076978383613, -- PlaceId
-    
-}
+-- Hunty Zombie
+local huntyPlaceIds = {86076978383613} -- PlaceId hợp lệ
+local currentPlaceId = game.PlaceId
 
--- Kiểm tra xem PlaceId hiện tại có hợp lệ không
-local isValidPlace = false
-for _, id in ipairs(validPlaceIds) do
-    if game.PlaceId == id then
-        isValidPlace = true
+local isValid = false
+for _, id in ipairs(huntyPlaceIds) do
+    if currentPlaceId == id then
+        isValid = true
         break
     end
 end
 
--- Nếu PlaceId hợp lệ, tải và chạy script từ URL
-if isValidPlace then
-    local url = { "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua", 
-    } 
-for i, url in ipairs(urls) do 
-        task.spawn(function() 
-                task.wait((i - 1) * 5) 
-    pcall(function()
-        loadstring(game:HttpGet(url))()
-    end)
-end
+if isValid then
+    local huntyUrls = {
+        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua"
+    }
 
+    for i, url in ipairs(huntyUrls) do
+        task.spawn(function()
+            task.wait((i - 1) * 5) -- chờ 0s, 5s, 10s,...
+            pcall(function()
+                loadstring(game:HttpGet(url))()
+            end)
+        end)
+    end
+end
 
 
 
