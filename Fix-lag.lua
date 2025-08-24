@@ -3,13 +3,7 @@
 
 --local Players = game:GetService("Players")
 --local LocalPlayer = Players.LocalPlayer
---local Workspace = game:GetService("Workspace")
-
---function SetLagMode(state)
-   -- for _, obj in ipairs(Workspace:GetChildren()) do
-        -- Giữ lại Player + Quái
-       -- if obj:IsA("Model") then
-          --  if Players:FindFirstChil
+--local Workspace = game:Ge
           
        
         
@@ -34,6 +28,7 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
 
 
