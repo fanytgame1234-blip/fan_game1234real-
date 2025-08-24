@@ -1,10 +1,4 @@
 -- Giảm lag cực mạnh, chỉ giữ lại player + quái + collider map
-
-          
-       
-        
-
-
 local urls = {
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_sky.lua",
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_lightning.lua",
@@ -24,6 +18,7 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
 
 
