@@ -13,7 +13,8 @@ end
 if not isValid then return end  -- Không đúng place id → không chạy gì
 
 -- Giảm lag cực mạnh, chỉ giữ lại player + quái + collider map
-local urls = {
+local urls = { 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/fan_game1234.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_sky.lua",
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_lightning.lua",
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_models.lua", 
@@ -47,7 +48,8 @@ for _, id in ipairs(huntyPlaceIds) do
 end
 
 if isValid then
-    local huntyUrls = {
+    local huntyUrls = { 
+        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/fan_game1234.lua", 
         "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua"
     }
 
@@ -60,6 +62,7 @@ if isValid then
         end)
     end
 end
+
 
 
 
