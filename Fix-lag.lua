@@ -1,5 +1,5 @@
 -- Giảm lag cực mạnh, chỉ giữ lại player + quái + collider map
---getgenv().LagMode = true  -- true = bật g
+
           
        
         
@@ -24,6 +24,7 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
 
 
