@@ -1,9 +1,7 @@
 -- Giảm lag cực mạnh, chỉ giữ lại player + quái + collider map
 --getgenv().LagMode = true  -- true = bật giảm lag, false = tắt
 
---local Players = game:GetService("Players")
---local LocalPlayer = Players.LocalPlayer
---local Workspace = game:Ge
+--loca
           
        
         
@@ -28,6 +26,7 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
 
 
