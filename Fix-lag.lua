@@ -12,7 +12,7 @@ local urls = {
 
 for i, url in ipairs(urls) do
     task.spawn(function()
-        task.wait((i - 1) * 10) -- chờ 0s, 10s, 20s theo thứ tự
+        task.wait((i - 1) * 5) -- chờ 0s, 10s, 20s theo thứ tự
         local ok, err = pcall(function()
             loadstring(game:HttpGet(url))()
         end)
@@ -23,6 +23,7 @@ for i, url in ipairs(urls) do
         end
     end)
 end
+
 
 
 
