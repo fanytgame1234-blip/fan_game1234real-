@@ -65,7 +65,40 @@ if isValid then
             end)
         end)
     end
+end 
+
+--Grow a garden 
+-- Giảm lag cực mạnh cho gag place
+
+-- PlaceId hợp lệ 
+local gagPlaceIds = {126884695634066}
+local currentPlaceId = game.PlaceId
+
+-- Check có hợp lệ không
+local isValid = false
+for _, id in ipairs(gagPlaceIds) do
+    if currentPlaceId == id then
+        isValid = true
+        break
+    end
 end
+
+-- Nếu đúng place → chạy
+if isValid then
+    local gagUrls = {  
+        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/delete_model_plantgag.lua"
+    }
+
+    for i, url in ipairs(gagUrls) do
+        task.spawn(function()
+            task.wait((i - 1) * 5) -- chạy lần lượt: 0s, 5s, 10s...
+            pcall(function()
+                loadstring(game:HttpGet(url))()
+            end)
+        end)
+    end
+end
+
 
 
 
