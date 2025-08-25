@@ -14,15 +14,15 @@ if not isValid then return end  -- Không đúng place id → không chạy gì
 
 -- Giảm lag cực mạnh, chỉ giữ lại player + quái + collider map
 local urls = { 
-    "https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/muhehehe.lua", 
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/fan_game1234.lua", 
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_sky.lua",
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_lightning.lua",
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_models.lua", 
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player-mob.lua", 
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_animation.lua", 
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_other_sounds.lua",  
-    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_player_sounds.lua"
+    "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_sky.lua",
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_lightning.lua",
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_models.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_texture_player-mob.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_animation.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_other_sounds.lua",  
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_player_sounds.lua"
 }
 
 for i, url in ipairs(urls) do
@@ -50,11 +50,11 @@ end
 
 if isValid then
     local huntyUrls = { 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/muhehehe.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/fan_game1234.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_model_school_hunty_zombie.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/delete_model_sewers_hunty_zombie.lua"
+        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
+        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
+        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_texture_player_hunty_zombie.lua", 
+        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_model_school_hunty_zombie.lua", 
+        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_model_sewers_hunty_zombie.lua"
     }
 
     for i, url in ipairs(huntyUrls) do
@@ -86,8 +86,8 @@ end
 -- Nếu đúng place → chạy
 if isValid then
     local gagUrls = {  
-"https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/muhehehe.lua",  --hehehe		
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/delete_model_plantgag.lua"
+"https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua",  --hehehe		
+        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_model_plantgag.lua"
     }
 
     for i, url in ipairs(gagUrls) do
@@ -99,6 +99,7 @@ if isValid then
         end)
     end
 end
+
 
 
 
