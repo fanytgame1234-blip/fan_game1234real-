@@ -86,6 +86,7 @@ end
 -- Nếu đúng place → chạy
 if isValid then
     local gagUrls = {  
+"https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/muhehehe.lua",  --hehehe		
         "https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/delete_model_plantgag.lua"
     }
 
@@ -98,6 +99,7 @@ if isValid then
         end)
     end
 end
+
 
 
 
