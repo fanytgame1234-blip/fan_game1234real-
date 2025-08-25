@@ -1,6 +1,4 @@
---Script Fix Lag By @fan_game1234 (Y-T) 
-  -- Giảm lag cực mạnh (Blox Fruits)
-local validPlaceIdsBF = {2753915549, 4442
+--Script
 -- Script Fix Lag By @fan_game1234 (Y-T)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
@@ -42,6 +40,7 @@ if url then
 else
     warn("⛔ No Fix-Lag script for this PlaceId:", placeId)
     end                       
+
 
 
 
