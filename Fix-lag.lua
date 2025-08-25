@@ -50,7 +50,8 @@ end
 if isValid then
     local huntyUrls = { 
         "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/fan_game1234.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua"
+        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_texture_player_hunty_zombie.lua", 
+        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/refs/heads/main/delete_model_school_hunty_zombie.lua"
     }
 
     for i, url in ipairs(huntyUrls) do
@@ -62,6 +63,7 @@ if isValid then
         end)
     end
 end
+
 
 
 
