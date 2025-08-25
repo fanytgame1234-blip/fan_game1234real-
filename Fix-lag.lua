@@ -1,5 +1,4 @@
--- Giảm lag cực mạnh
---local validPlaceIds = {27
+
   -- Giảm lag cực mạnh (Blox Fruits)
 local validPlaceIdsBF = {2753915549, 4442272183, 7449423635}
 local currentPlaceIdBF = game.PlaceId
@@ -95,6 +94,7 @@ if isValidGag then
         end)
     end
                         
+
 
 
 
