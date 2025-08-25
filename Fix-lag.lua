@@ -18,8 +18,10 @@ local scripts = {
 
     -- Grow a Garden
     [126884695634066] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Gag.lua", 
-    -- Build a plane 
-    [137925884276740] = "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/Fix-Lag-Build-A-Plane.lua"
+    -- Build a plane    
+    [137925884276740] = 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/1234/refs/heads/main/muhehehe.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/Fix-Lag-Build-A-Plane.lua"
 }
 
 -- Kiểm tra và chạy script con
@@ -41,6 +43,7 @@ if url then
 else
     warn("⛔ No Fix-Lag script for this PlaceId:", placeId)
     end                       
+
 
 
 
