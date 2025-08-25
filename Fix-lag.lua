@@ -1,4 +1,4 @@
-
+--Script Fix Lag By @fan_game1234 (Y-T) 
   -- Giảm lag cực mạnh (Blox Fruits)
 local validPlaceIdsBF = {2753915549, 4442272183, 7449423635}
 local currentPlaceIdBF = game.PlaceId
@@ -94,6 +94,7 @@ if isValidGag then
         end)
     end
                         
+
 
 
 
