@@ -1,24 +1,5 @@
 -- Giảm lag cực mạnh
---local validPlaceIds = {2753915549, 4442272183, 7449423635}
---local currentPlaceId = game.PlaceId
-
---local isValid = false
---for _, id in ipairs(validPlaceIds) do
-  --  if currentPlaceId == id then
-   --     isValid = true
-    --    break
-   -- end
---end
-
---if not isValid then return end  -- Không đúng place id → không chạy gì
-
--- Giảm lag cực mạnh, chỉ giữ lại player + quái + collider map
---local urls = { 
-    --"https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
-   -- "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
-   -- "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_sky.lua",
-  --  "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_lightning.lua",
-  --  "https://raw.githubusercontent.com/fanyt
+--local validPlaceIds = {27
   -- Giảm lag cực mạnh (Blox Fruits)
 local validPlaceIdsBF = {2753915549, 4442272183, 7449423635}
 local currentPlaceIdBF = game.PlaceId
@@ -114,6 +95,7 @@ if isValidGag then
         end)
     end
                         
+
 
 
 
