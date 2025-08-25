@@ -1,99 +1,48 @@
 --Script Fix Lag By @fan_game1234 (Y-T) 
   -- Giảm lag cực mạnh (Blox Fruits)
-local validPlaceIdsBF = {2753915549, 4442272183, 7449423635}
-local currentPlaceIdBF = game.PlaceId
+local validPlaceIdsBF = {2753915549, 4442
+-- Script Fix Lag By @fan_game1234 (Y-T)
+if not game:IsLoaded() then game.Loaded:Wait() end
 
-local isValidBF = false
-for _, id in ipairs(validPlaceIdsBF) do
-    if currentPlaceIdBF == id then
-        isValidBF = true
-        break
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local player = Players.LocalPlayer
+local placeId = game.PlaceId
+
+-- Bảng PlaceId -> URL file con
+local scripts = {
+    -- Blox Fruits
+    [2753915549] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Blox.lua",
+    [4442272183] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Blox.lua",
+    [7449423635] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Blox.lua",
+
+    -- Hunty Zombie
+    [86076978383613] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Hunty.lua",
+
+    -- Grow a Garden
+    [126884695634066] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Gag.lua"
+}
+
+-- Kiểm tra và chạy script con
+local url = scripts[placeId]
+if url then
+    local ok, err = pcall(function()
+        loadstring(game:HttpGet(url))()
+    end)
+    if ok then
+        -- ✅ Gửi thông báo khi load thành công
+        StarterGui:SetCore("SendNotification", {
+            Title = "Fix Lag",
+            Text = "✅ Script đã load!",
+            Duration = 5
+        })
+    else
+        warn("❌ Error loading:", url, err)
     end
-end
+else
+    warn("⛔ No Fix-Lag script for this PlaceId:", placeId)
+    end                       
 
-if isValidBF then
-    local urlsBF = { 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_sky.lua",
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_lightning.lua",
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_models.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_texture_player-mob.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_animation.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_other_sounds.lua",  
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_player_sounds.lua"
-    }
-
-    for i, url in ipairs(urlsBF) do
-        task.spawn(function()
-            task.wait((i - 1) * 5)
-            pcall(function()
-                loadstring(game:HttpGet(url))()
-            end)
-        end)
-    end
-end
-
-
--- Hunty Zombie
-local huntyPlaceIds = {86076978383613}
-local currentPlaceIdHunty = game.PlaceId
-
-local isValidHunty = false
-for _, id in ipairs(huntyPlaceIds) do
-    if currentPlaceIdHunty == id then
-        isValidHunty = true
-        break
-    end
-end
-
-if isValidHunty then
-    local huntyUrls = { 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_texture_player_hunty_zombie.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_model_school_hunty_zombie.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_model_sewers_hunty_zombie.lua"
-    }
-
-    for i, url in ipairs(huntyUrls) do
-        task.spawn(function()
-            task.wait((i - 1) * 5)
-            pcall(function()
-                loadstring(game:HttpGet(url))()
-            end)
-        end)
-    end
-end
-
-
--- Grow a Garden
-local gagPlaceIds = {126884695634066}
-local currentPlaceIdGag = game.PlaceId
-
-local isValidGag = false
-for _, id in ipairs(gagPlaceIds) do
-    if currentPlaceIdGag == id then
-        isValidGag = true
-        break
-    end
-end
-
-if isValidGag then
-    local gagUrls = {  
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
-        "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_model_plantgag.lua"
-    }
-
-    for i, url in ipairs(gagUrls) do
-        task.spawn(function()
-            task.wait((i - 1) * 5)
-            pcall(function()
-                loadstring(game:HttpGet(url))()
-            end)
-        end)
-    end
-                        
 
 
 
