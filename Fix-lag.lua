@@ -18,52 +18,7 @@
    -- "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
    -- "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_sky.lua",
   --  "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_lightning.lua",
-  --  "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_models.lua", 
-  --  "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_texture_player-mob.lua", 
---    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_animation.lua", 
-  --  "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_other_sounds.lua",  
-  --  "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_player_sounds.lua"
---}
-
---for i, url in ipairs(urls) do
- --   task.spawn(function()
-   --     task.wait((i - 1) * 5) -- chờ 0s, 5s, 10s, ...
-     --   pcall(function()
- --        loadstring(game:HttpGet(url))()
-       -- end)
---    end)
---end 
-
-
---Hunty zombie 
--- Hunty Zombie
---local huntyPlaceIds = {86076978383613} -- PlaceId hợp lệ
---local currentPlaceId = game.PlaceId
-
---local isValid = false
---for _, id in ipairs(huntyPlaceIds) do
-    --if currentPlaceId == id then
-      --  isValid = true
-      --  break
-  --  end
---end
-
---if isValid then
-   -- local huntyUrls = { 
-    --    "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
-    --    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
-   --     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_texture_player_hunty_zombie.lua", 
-     --   "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_model_school_hunty_zombie.lua", 
-     --   "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_model_sewers_hunty_zombie.lua"
---    }
-
- --   for i, url in ipairs(huntyUrls) do
-      --  task.spawn(function()
-          --  task.wait((i - 1) * 5) -- chờ 0s, 5s, 10s,...
-         --   pcall(function()
-        --        loadstring(game:HttpGet(url))()
-         --   end)
-      --  end)
+  --  "https://raw.githubusercontent.com/fanyt
   -- Giảm lag cực mạnh (Blox Fruits)
 local validPlaceIdsBF = {2753915549, 4442272183, 7449423635}
 local currentPlaceIdBF = game.PlaceId
@@ -159,6 +114,7 @@ if isValidGag then
         end)
     end
                         
+
 
 
 
