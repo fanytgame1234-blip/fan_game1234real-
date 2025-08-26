@@ -1,154 +1,164 @@
 --// Fix Lag Hub UI by fan_game1234 
 
-local TweenService = game:GetService("TweenService")
-local RunService = game:GetService("RunService")
+-- Fix Lag Hub UI nâng cấp - Thu nhỏ/mở + FPS/Ping/ClientTime/CPU/GPU
+
+-- Services
 local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
 local Stats = game:GetService("Stats")
+local RunService = game:GetService("RunService")
+local UIS = game:GetService("TweenService")
+local player = Players.LocalPlayer
+local PlayerGui = player:WaitForChild("PlayerGui")
 
--- UI
-local ScreenGui = Instance.new("ScreenGui", LocalPlayer:WaitForChild("PlayerGui"))
-ScreenGui.ResetOnSpawn = false
+-- GUI chính
+local screenGui = Instance.new("ScreenGui", PlayerGui)
+screenGui.Name = "FixLagHubUI"
 
-local headerHeight = 30
-local fullSize = UDim2.new(0,280,0,160)
-local minimizedSize = UDim2.new(0,280,0,headerHeight)
-local tweenTime = 0.5
+local frame = Instance.new("Frame", screenGui)
+frame.Size = UDim2.new(0,360,0,220)
+frame.Position = UDim2.new(0,20,0,20)
+frame.BackgroundColor3 = Color3.fromRGB(30,30,30)
+frame.BorderSizePixel = 0
+frame.Active = true
+frame.Draggable = true
 
-local MainFrame = Instance.new("Frame", ScreenGui)
-MainFrame.Size = fullSize
-MainFrame.Position = UDim2.new(0,20,0,20)
-MainFrame.BackgroundColor3 = Color3.fromRGB(30,30,30)
-MainFrame.BorderSizePixel = 0
-MainFrame.Active = true
-MainFrame.Draggable = true
+-- Top bar
+local topBar = Instance.new("Frame", frame)
+topBar.Size = UDim2.new(1,0,0,30)
+topBar.Position = UDim2.new(0,0,0,0)
+topBar.BackgroundColor3 = Color3.fromRGB(40,40,40)
 
--- Header
-local Header = Instance.new("Frame", MainFrame)
-Header.Size = UDim2.new(1,0,0,headerHeight)
-Header.BackgroundColor3 = Color3.fromRGB(45,45,45)
-Header.BorderSizePixel = 0
+local title = Instance.new("TextLabel", topBar)
+title.Text = "Fix Lag Hub - fan_game1234"
+title.Size = UDim2.new(0.7,0,1,0)
+title.Position = UDim2.new(0,10,0,0)
+title.TextColor3 = Color3.fromRGB(255,255,255)
+title.BackgroundTransparency = 1
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.Font = Enum.Font.Code
+title.TextSize = 18
 
-local Title = Instance.new("TextLabel", Header)
-Title.Size = UDim2.new(1,-70,1,0)
-Title.Position = UDim2.new(0,5,0,0)
-Title.BackgroundTransparency = 1
-Title.Text = "Fix lag Hub - fan_game1234"
-Title.Font = Enum.Font.Code
-Title.TextSize = 14
-Title.TextColor3 = Color3.fromRGB(200,200,200)
-Title.TextXAlignment = Enum.TextXAlignment.Left
+local minimizeBtn = Instance.new("TextButton", topBar)
+minimizeBtn.Text = "-"
+minimizeBtn.Size = UDim2.new(0,25,1,0)
+minimizeBtn.Position = UDim2.new(0.75,0,0,0)
+minimizeBtn.TextColor3 = Color3.fromRGB(255,255,255)
+minimizeBtn.BackgroundColor3 = Color3.fromRGB(60,60,60)
+minimizeBtn.Font = Enum.Font.Code
+minimizeBtn.TextSize = 20
 
-local MinimizeButton = Instance.new("TextButton", Header)
-MinimizeButton.Size = UDim2.new(0,30,1,0)
-MinimizeButton.Position = UDim2.new(1,-65,0,0)
-MinimizeButton.BackgroundTransparency = 1
-MinimizeButton.Text = "-"
-MinimizeButton.Font = Enum.Font.Code
-MinimizeButton.TextSize = 20
-MinimizeButton.TextColor3 = Color3.fromRGB(255,255,255)
+local closeBtn = Instance.new("TextButton", topBar)
+closeBtn.Text = "X"
+closeBtn.Size = UDim2.new(0,25,1,0)
+closeBtn.Position = UDim2.new(0.85,0,0,0)
+closeBtn.TextColor3 = Color3.fromRGB(255,255,255)
+closeBtn.BackgroundColor3 = Color3.fromRGB(60,60,60)
+closeBtn.Font = Enum.Font.Code
+closeBtn.TextSize = 20
 
-local CloseButton = Instance.new("TextButton", Header)
-CloseButton.Size = UDim2.new(0,30,1,0)
-CloseButton.Position = UDim2.new(1,-30,0,0)
-CloseButton.BackgroundTransparency = 1
-CloseButton.Text = "X"
-CloseButton.Font = Enum.Font.Code
-CloseButton.TextSize = 20
-CloseButton.TextColor3 = Color3.fromRGB(255,255,255)
+local separator = Instance.new("Frame", frame)
+separator.Size = UDim2.new(1,-10,0,2)
+separator.Position = UDim2.new(0,5,0,30)
+separator.BackgroundColor3 = Color3.fromRGB(80,80,80)
 
-local Separator = Instance.new("Frame", MainFrame)
-Separator.Size = UDim2.new(1,0,0,2)
-Separator.Position = UDim2.new(0,0,0,headerHeight)
-Separator.BackgroundColor3 = Color3.fromRGB(100,100,100)
-Separator.BorderSizePixel = 0
+-- Container chứa tất cả label
+local container = Instance.new("Frame", frame)
+container.Size = UDim2.new(1,0,1,-30)
+container.Position = UDim2.new(0,0,0,30)
+container.BackgroundTransparency = 1
 
-local Content = Instance.new("Frame", MainFrame)
-Content.Size = UDim2.new(1,0,1,-headerHeight-2)
-Content.Position = UDim2.new(0,0,0,headerHeight+2)
-Content.BackgroundTransparency = 1
-Content.ClipsDescendants = true
-
--- Labels
-local function MakeLabel(parent, yPos, size)
-    local lbl = Instance.new("TextLabel", parent)
-    lbl.Size = size or UDim2.new(1,-10,0,20)
-    lbl.Position = UDim2.new(0,5,0,yPos)
+-- Tạo label trong container
+local function createLabel(yPos)
+    local lbl = Instance.new("TextLabel", container)
+    lbl.Position = UDim2.new(0,10,0,yPos)
+    lbl.Size = UDim2.new(1,-20,0,25)
     lbl.BackgroundTransparency = 1
-    lbl.Font = Enum.Font.Code
-    lbl.TextSize = 14
-    lbl.TextColor3 = Color3.fromRGB(255,255,255)
     lbl.TextXAlignment = Enum.TextXAlignment.Left
+    lbl.Font = Enum.Font.Code
+    lbl.TextSize = 18
+    lbl.TextColor3 = Color3.fromRGB(0,255,0)
     return lbl
 end
 
-local FpsLabel = MakeLabel(Content,5)
-local PingLabel = MakeLabel(Content,30)
-local TimeLabel = MakeLabel(Content,55, UDim2.new(1,-10,0,22))
-TimeLabel.TextSize = 16
-local MessageLabel = MakeLabel(Content,85)
-MessageLabel.Text = "[Chúc chơi vui vẻ!]"
-MessageLabel.TextColor3 = Color3.fromRGB(0,255,0)
+local fpsLabel = createLabel(5)
+local pingLabel = createLabel(35)
+local clientTimeLabel = createLabel(65)
+local cpuLabel = createLabel(95)
+local gpuLabel = createLabel(125)
+local msgLabel = createLabel(155)
 
--- Logic FPS/Ping
-local frames, lastUpdate, elapsedTime = 0, tick(), 0
-local isOpen = true
+-- Thu nhỏ/Mở
+local minimized = false
+minimizeBtn.MouseButton1Click:Connect(function()
+    minimized = not minimized
+    local goal = {}
+    if minimized then
+        goal.Size = UDim2.new(0,360,0,30)
+        container.Visible = false
+    else
+        goal.Size = UDim2.new(0,360,0,220)
+        container.Visible = true
+    end
+    UIS:Create(frame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), goal):Play()
+end)
 
+closeBtn.MouseButton1Click:Connect(function()
+    screenGui:Destroy()
+end)
+
+-- FPS/Ping/ClientTime/CPU/GPU update
+local lastTime = tick()
+local frameCount = 0
+local FPS = 0
+local startTime = tick() -- Client time
 RunService.RenderStepped:Connect(function()
-    frames += 1
-    local now = tick()
-    if now - lastUpdate >= 1 then
-        local fps = frames / (now - lastUpdate)
-        frames = 0
-        lastUpdate = now
-        -- FPS màu
-        if fps < 10 then
-            FpsLabel.TextColor3 = Color3.fromRGB(255,0,0)
-        elseif fps < 20 then
-            FpsLabel.TextColor3 = Color3.fromRGB(255,255,0)
-        else
-            FpsLabel.TextColor3 = Color3.fromRGB(0,255,0)
-        end
-        FpsLabel.Text = "FPS: "..math.floor(fps)
+    frameCount = frameCount + 1
+    if tick() - lastTime >= 1 then
+        FPS = frameCount / (tick() - lastTime)
+        frameCount = 0
+        lastTime = tick()
     end
 
-    local ping = Stats.Network.ServerStatsItem["Data Ping"]:GetValue()
-    PingLabel.Text = "Ping(ms): "..ping
-    PingLabel.TextColor3 = (ping <= 150) and Color3.fromRGB(0,255,0) or Color3.fromRGB(255,0,0)
-end)
+    -- FPS
+    local fpsColor = Color3.fromRGB(0,255,0)
+    if FPS < 10 then fpsColor = Color3.fromRGB(255,0,0)
+    elseif FPS < 20 then fpsColor = Color3.fromRGB(255,255,0) end
+    fpsLabel.Text = string.format("FPS: %d", FPS)
+    fpsLabel.TextColor3 = fpsColor
 
--- Thời gian chơi + lời nhắc
-spawn(function()
-    while true do
-        wait(1)
-        elapsedTime += 1
-        local h = math.floor(elapsedTime/3600)
-        local m = math.floor((elapsedTime%3600)/60)
-        local s = elapsedTime%60
-        TimeLabel.Text = string.format("Client: %02dh %02dm %02ds", h,m,s)
+    -- Ping
+    local ping = math.floor(Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
+    local pingColor = Color3.fromRGB(0,255,0)
+    if ping > 150 then pingColor = Color3.fromRGB(255,0,0) end
+    pingLabel.Text = string.format("Ping(ms): %d", ping)
+    pingLabel.TextColor3 = pingColor
 
-        if elapsedTime < 180*60 then
-            MessageLabel.Text = "[Chúc chơi vui vẻ!]"
-            MessageLabel.TextColor3 = Color3.fromRGB(0,255,0)
-        else
-            MessageLabel.Text = "[Nghỉ ngơi giữ sức đi!]"
-            MessageLabel.TextColor3 = Color3.fromRGB(255,0,0)
-        end
-    end
-end)
+    -- ClientTime
+    local elapsed = tick() - startTime
+    local h = math.floor(elapsed/3600)
+    local m = math.floor((elapsed%3600)/60)
+    local s = math.floor(elapsed%60)
+    clientTimeLabel.Text = string.format("Client: %02dh %02dm %02ds", h,m,s)
+    clientTimeLabel.TextColor3 = (elapsed>180*60) and Color3.fromRGB(255,0,0) or Color3.fromRGB(0,255,0)
 
--- Toggle thu nhỏ/mở
-local function ToggleFrame()
-    isOpen = not isOpen
-    TweenService:Create(MainFrame, TweenInfo.new(tweenTime, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
-        Size = isOpen and fullSize or minimizedSize
-    }):Play()
-    TweenService:Create(Content, TweenInfo.new(tweenTime, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {
-        Size = isOpen and UDim2.new(1,0,1,-headerHeight-2) or UDim2.new(1,0,0,0)
-    }):Play()
-end
+    -- Lời nhắc
+    msgLabel.Text = (elapsed>180*60) and "[Nghỉ ngơi giữ sức đi!]" or "[Chúc chơi vui vẻ!]"
+    msgLabel.TextColor3 = (elapsed>180*60) and Color3.fromRGB(255,0,0) or Color3.fromRGB(0,255,0)
 
-MinimizeButton.MouseButton1Click:Connect(ToggleFrame)
-CloseButton.MouseButton1Click:Connect(function()
-    ScreenGui:Destroy()
+    -- CPU Load ước lượng
+    local mem = Stats:GetTotalMemoryUsageMb()
+    local cpuColor = Color3.fromRGB(0,255,0)
+    local cpuLoad = "Low"
+    if mem > 800 then cpuColor = Color3.fromRGB(255,0,0); cpuLoad="High"
+    elseif mem>400 then cpuColor = Color3.fromRGB(255,255,0); cpuLoad="Medium" end
+    cpuLabel.Text = string.format("CPU Load(≈): %s", cpuLoad)
+    cpuLabel.TextColor3 = cpuColor
+
+    -- GPU Load ước lượng
+    local gpuColor = Color3.fromRGB(0,255,0)
+    local gpuLoad = "Low"
+    if FPS < 15 then gpuColor = Color3.fromRGB(255,0,0); gpuLoad="High"
+    elseif FPS < 25 then gpuColor = Color3.fromRGB(255,255,0); gpuLoad="Medium" end
+    gpuLabel.Text = string.format("GPU Load(≈): %s", gpuLoad)
+    gpuLabel.TextColor3 = gpuColor
 end)
