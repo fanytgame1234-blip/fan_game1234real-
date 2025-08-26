@@ -6,9 +6,10 @@ local gagUrls = {
 }
 
 for i, url in ipairs(gagUrls) do
-    task.wait(10 * (i - 1))
+    task.wait(1 * (i - 1))
     pcall(function()
         loadstring(game:HttpGet(url))()
     end)
 
 end
+
