@@ -1,5 +1,6 @@
 -- Fix lag cho Blox Fruits
 local urlsBF = { 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Hub-Ui.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/fan_game1234.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/delete_sky.lua",
@@ -16,4 +17,5 @@ for i, url in ipairs(urlsBF) do
     pcall(function()
         loadstring(game:HttpGet(url))()
     end)
+
 end
