@@ -13,9 +13,10 @@ local urlsBF = {
 }
 
 for i, url in ipairs(urlsBF) do
-    task.wait(10 * (i - 1))
+    task.wait(1 * (i - 1))
     pcall(function()
         loadstring(game:HttpGet(url))()
     end)
 
 end
+
