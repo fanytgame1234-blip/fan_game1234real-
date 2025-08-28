@@ -2,6 +2,7 @@
 local gagUrls = {  
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Hub-Ui.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/muhehehe.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/delete_lightning_gag.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_fx_gag.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_model_plantgag.lua"
 }
@@ -13,5 +14,6 @@ for i, url in ipairs(gagUrls) do
     end)
 
 end
+
 
 
