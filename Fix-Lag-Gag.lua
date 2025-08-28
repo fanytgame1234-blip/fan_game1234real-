@@ -5,6 +5,7 @@ local gagUrls = {
     "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/delete_texture_player-npc_gag.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/delete_lightning_gag.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_fx_gag.lua", 
+    "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/delete_all_sounds_Gag.lua", 
     "https://raw.githubusercontent.com/fanytgame1234-blip/1234/main/delete_model_plantgag.lua"
 }
 
@@ -15,6 +16,7 @@ for i, url in ipairs(gagUrls) do
     end)
 
 end
+
 
 
 
