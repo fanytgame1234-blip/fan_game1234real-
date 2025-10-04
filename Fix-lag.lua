@@ -1,9 +1,5 @@
 -- Script Fix Lag By @fan_game1234 (Y-T)
-if not game:IsLoaded() then game.Loaded:Wait() end
-
-local Players = game:GetService("Players")
-local StarterGui = game:GetService("S
-
+if not game:IsLoaded() then game.Load
 
 -- Script Fix Lag By @fan_game1234 (Y-T)
 if not game:IsLoaded() then game.Loaded:Wait() end
@@ -60,6 +56,7 @@ else
         Duration = 5
     })
 end
+
 
 
 
