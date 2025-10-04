@@ -1,6 +1,4 @@
--- Script Fix Lag By @fan_game1234 (Y-T)
-if not game:IsLoaded() then game.Load
-
+-- Script Fix Lag By 
 -- Script Fix Lag By @fan_game1234 (Y-T)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
@@ -56,6 +54,7 @@ else
         Duration = 5
     })
 end
+
 
 
 
