@@ -39,11 +39,20 @@ if url then
             Duration = 5
         })
     else
-        warn("❌ Error loading:", url, err)
+        StarterGui:Setcore(" SendNotification", { 
+                Title = "Fix lag"  
+                Text = "Tải không được!:(", 
+                Duration = 5 
+            }) 
     end
 else
-    warn("⛔ No Fix-Lag script for this PlaceId:", placeId)
+    StarterGui:Setcore("SendNotificatin", { 
+            Title = " Fix lag", 
+            Text = "💀Lỗi rồi!", 
+            Duration = 5
+        }) 
     end                       
+
 
 
 
