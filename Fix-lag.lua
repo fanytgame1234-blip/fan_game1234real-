@@ -2,11 +2,7 @@
 if not game:IsLoaded() then game.Loaded:Wait() end
 
 local Players = game:GetService("Players")
-local StarterGui = game:GetService("StarterGui")
-local player = Players.LocalPlayer
-local placeId = game.PlaceId
-
---
+local StarterGui = game:GetService("S
 
 
 -- Script Fix Lag By @fan_game1234 (Y-T)
@@ -64,6 +60,7 @@ else
         Duration = 5
     })
 end
+
 
 
 
