@@ -20,39 +20,7 @@ local scripts = {
     [126884695634066] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Gag.lua", 
 
     -- Build a plane    
-    [137925884276740] = "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/refs/heads/main/Main-Fix-Lag-Build-A-Plane.lua", 
-
-    -- Dead rails 
-    [70876832253163] = "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/Main-Fix-Lag_Dead-Rails.lua"
-}
-
--- Kiểm tra và chạy script con
-local url = scripts[placeId]
-if url then
-    local ok, err = pcall(function()
-        loadstring(game:HttpGet(url))()
-    end)
-    if ok then
-        -- ✅ Gửi thông báo khi load thành công
-        StarterGui:SetCore("SendNotification", {
-            Title = "Fix Lag",
-            Text = "✅ Script đã load!",
-            Duration = 5
-        })
-    else
-        StarterGui:SetCore("SendNotification", { 
-            Title = "Fix Lag",
-            Text = "Tải không được! :(",
-            Duration = 5
-        })
-    end
-else
-    StarterGui:SetCore("SendNotification", { 
-        Title = "Fix Lag",
-        Text = "💀 Lỗi rồi!",
-        Duration = 5
-    })
-end
+    [1379258
 
 
 
