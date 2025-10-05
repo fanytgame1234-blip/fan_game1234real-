@@ -1,8 +1,6 @@
 -- ⚡ Fix lag cho Plant vs Brainrot 
 -- Đợi game load xong
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
+repeat task.wait() until game:IsLoaded()
 
 local Pvburl = {
     "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Fix-Lag-Hub-Ui.lua", 
@@ -19,6 +17,7 @@ for i, url in ipairs(Pvburl) do
     end)
 
 end   
+
 
 
 
