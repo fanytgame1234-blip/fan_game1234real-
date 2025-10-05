@@ -1,5 +1,5 @@
- -- Script Fix Lag By @fan_game1234 (Y-T)
-if not ga
+ -- Script Fix 
+
 
 
 
