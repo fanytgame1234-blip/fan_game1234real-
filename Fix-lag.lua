@@ -37,7 +37,7 @@ if url then
             Title = "Fix Lag",
             Text = "✅ Script đã load!",
             Duration = 5,
-            Icon = "rbxassetid://97428005191166"  -- 👈 Thêm icon vào đây
+            Icon = "rbxassetid://97428005191166"  
         })
     else
         StarterGui:SetCore("SendNotification", { 
@@ -50,11 +50,12 @@ if url then
 else
     StarterGui:SetCore("SendNotification", { 
         Title = "Fix Lag",
-        Text = "💀 Lỗi rồi!",
+        Text = "Đợi cập nhật đi! 💀",
         Duration = 5,
         Icon = "rbxassetid://97428005191166"
     })
 end
+
 
 
 
