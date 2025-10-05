@@ -1,5 +1,6 @@
 -- Script Fix Lag By @fan_game1234 (Y-T)
-if not game:IsLoaded() then game.Loaded:Wait() end
+-- Đợi game load xong
+repeat task.wait() until game:IsLoaded()
 
 local Players = game:GetService("Players")
 local StarterGui = game:GetService("StarterGui")
@@ -57,6 +58,7 @@ else
         Icon = "rbxassetid://97428005191166"
     })
 end
+
 
 
 
