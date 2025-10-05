@@ -25,7 +25,7 @@ local scripts = {
     -- Dead rails 
     [70876832253163] = "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/Main-Fix-Lag_Dead-Rails.lua", 
     --Plant vs thúi não 
-    [127742093697776] = "--"
+    [127742093697776] = "https://raw.githubusercontent.com/fanytgame1234-blip/fan_game1234real-/main/Main-%20fix-lag-PvB.lua"
 }
 
 -- Kiểm tra và chạy script con
@@ -57,6 +57,7 @@ else
         Icon = "rbxassetid://97428005191166"
     })
 end
+
 
 
 
