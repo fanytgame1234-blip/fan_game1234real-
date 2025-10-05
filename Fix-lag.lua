@@ -23,7 +23,9 @@ local scripts = {
     [137925884276740] = "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/refs/heads/main/Main-Fix-Lag-Build-A-Plane.lua", 
 
     -- Dead rails 
-    [70876832253163] = "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/Main-Fix-Lag_Dead-Rails.lua"
+    [70876832253163] = "https://raw.githubusercontent.com/fanytgame1234-blip/delete_model/main/Main-Fix-Lag_Dead-Rails.lua", 
+    --Plant vs thúi não 
+    [127742093697776] = "--"
 }
 
 -- Kiểm tra và chạy script con
@@ -55,6 +57,7 @@ else
         Icon = "rbxassetid://97428005191166"
     })
 end
+
 
 
 
