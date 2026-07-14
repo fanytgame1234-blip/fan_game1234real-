@@ -8,4 +8,17 @@ local TeleportService = game:GetService("TeleportService")
 local Lighting = game:GetService("Lighting")
 local VirtualUser = game:GetService("VirtualUser")
 
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local LocalPlayer = Players.LocalPlayer
+
+local Level = LocalPlayer:WaitForChild("Data"):WaitForChild("Level").Value
+
+StarterGui:SetCore("SendNotification", {
+    Title = "HỆ THỐNG",
+    Text = "Level của bạn là: " .. Level,
+    Duration = 5
+})
+
+
 
